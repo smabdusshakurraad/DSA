@@ -9,21 +9,21 @@ public class Expression {
         if(Objects.isNull(input)){
             throw new IllegalArgumentException();
         }
-        Stack<Character> stack = new Stack<>();
+        Stack<Character> dynamicStack = new Stack<>();
         for(char c: input.toCharArray()){
             if(isLeftExpression(c)){
-                stack.push(c);
+                dynamicStack.push(c);
             } else if (isRightExpression(c)) {
-                if(stack.empty())
+                if(dynamicStack.empty())
                     return false;
 
-                var top = stack.pop();
+                var top = dynamicStack.pop();
                 if (!bracketsMatch(c, top)) {
                     return false;
                 }
             }
         }
-        return stack.empty();
+        return dynamicStack.empty();
     }
 
     private boolean bracketsMatch(char right, char left) {
