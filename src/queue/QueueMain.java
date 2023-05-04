@@ -14,6 +14,24 @@ public class QueueMain {
         System.out.println(front);
         System.out.println(queue);
         reverse(queue);
+
+        // Queue using Array
+        ArrayQueue arrayQueue = new ArrayQueue();
+//        arrayQueue.dequeue();
+        arrayQueue.print();
+        arrayQueue.enqueue(10);
+        arrayQueue.enqueue(20);
+        arrayQueue.enqueue(30);
+        arrayQueue.enqueue(40);
+        arrayQueue.enqueue(50);
+        arrayQueue.dequeue();
+        arrayQueue.enqueue(60);
+        System.out.println(arrayQueue.dequeue());
+        arrayQueue.print();
+        System.out.println(arrayQueue.dequeue());
+        System.out.println(arrayQueue.peek());
+        arrayQueue.print();
+
     }
 
     public static void reverse(Queue<Integer> queue){
