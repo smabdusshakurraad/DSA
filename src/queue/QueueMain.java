@@ -32,6 +32,21 @@ public class QueueMain {
         System.out.println(arrayQueue.peek());
         arrayQueue.print();
 
+
+        System.out.println("Stack Queue");
+        QueueWithStack queueWithStack = new QueueWithStack();
+
+        queueWithStack.enqueue(10);
+        queueWithStack.enqueue(20);
+        queueWithStack.enqueue(30);
+
+        var first = queueWithStack.dequeue();
+        System.out.println(first);
+
+        var peek = queueWithStack.peek();
+        System.out.println(peek);
+
+
     }
 
     public static void reverse(Queue<Integer> queue){

@@ -6,7 +6,7 @@ public class ArrayQueue {
     private  int[] queue;
     private int front = 0;
     private int rear = 0;
-    int count;
+    private int count;
     public ArrayQueue(){
         queue = new int[5];
     }
