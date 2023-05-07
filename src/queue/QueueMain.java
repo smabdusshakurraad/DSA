@@ -16,8 +16,10 @@ public class QueueMain {
 //        System.out.println(front);
         System.out.println(queue);
 //        reverse(queue);
+        System.out.println();
 
         // Queue using Array
+        System.out.println("Array Queue");
         ArrayQueue arrayQueue = new ArrayQueue();
 //        arrayQueue.dequeue();
         arrayQueue.print();
@@ -33,6 +35,7 @@ public class QueueMain {
         System.out.println(arrayQueue.dequeue());
         System.out.println(arrayQueue.peek());
         arrayQueue.print();
+        System.out.println();
 
 
         System.out.println("Stack Queue");
@@ -47,6 +50,7 @@ public class QueueMain {
 
         var peek = queueWithStack.peek();
         System.out.println(peek);
+        System.out.println();
 
 
         System.out.println("Priority queue");
@@ -61,10 +65,23 @@ public class QueueMain {
         System.out.println(priorityQueue.remove());
 
         System.out.println(priorityQueue);
+        System.out.println();
 
         System.out.println("Queue reverser");
         QueueReverser.reverseRecursion(queue, 3);
         System.out.println(queue);
+        System.out.println();
+
+        System.out.println("Linked List Queue");
+        LinkedListQueue linkedListQueue = new LinkedListQueue();
+
+        linkedListQueue.enqueue(10);
+        linkedListQueue.enqueue(20);
+        linkedListQueue.enqueue(30);
+
+        linkedListQueue.dequeue();
+        System.out.println(linkedListQueue.peek());
+        System.out.println(linkedListQueue.toString());
 
 
     }
