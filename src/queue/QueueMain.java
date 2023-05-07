@@ -10,10 +10,12 @@ public class QueueMain {
         queue.add(10);
         queue.add(20);
         queue.add(30);
-        var front = queue.remove();
-        System.out.println(front);
+        queue.add(40);
+        queue.add(50);
+//        var front = queue.remove();
+//        System.out.println(front);
         System.out.println(queue);
-        reverse(queue);
+//        reverse(queue);
 
         // Queue using Array
         ArrayQueue arrayQueue = new ArrayQueue();
@@ -59,6 +61,10 @@ public class QueueMain {
         System.out.println(priorityQueue.remove());
 
         System.out.println(priorityQueue);
+
+        System.out.println("Queue reverser");
+        QueueReverser.reverseRecursion(queue, 3);
+        System.out.println(queue);
 
 
     }
