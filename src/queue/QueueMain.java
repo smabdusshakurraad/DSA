@@ -47,6 +47,20 @@ public class QueueMain {
         System.out.println(peek);
 
 
+        System.out.println("Priority queue");
+        PriorityQueue priorityQueue = new PriorityQueue();
+
+        priorityQueue.enqueue(10);
+        priorityQueue.enqueue(5);
+        priorityQueue.enqueue(2);
+        priorityQueue.enqueue(20);
+        priorityQueue.enqueue(1);
+        System.out.println(priorityQueue.dequeue());
+        System.out.println(priorityQueue.remove());
+
+        System.out.println(priorityQueue);
+
+
     }
 
     public static void reverse(Queue<Integer> queue){
