@@ -82,8 +82,15 @@ public class QueueMain {
         linkedListQueue.dequeue();
         System.out.println(linkedListQueue.peek());
         System.out.println(linkedListQueue.toString());
+        System.out.println();
 
+        System.out.println("Stack Using two queues");
+        StackUsingTwoQueues stackUsingTwoQueues = new StackUsingTwoQueues();
+        stackUsingTwoQueues.push(10);
+        stackUsingTwoQueues.push(20);
+        stackUsingTwoQueues.push(30);
 
+        System.out.println(stackUsingTwoQueues.pop());
     }
 
     public static void reverse(Queue<Integer> queue){
