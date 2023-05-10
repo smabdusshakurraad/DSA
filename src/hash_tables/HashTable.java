@@ -58,6 +58,7 @@ public class HashTable {
         var entry = getEntry(key);
         if(entry != null){
             getBucket(key).remove(entry);
+            return;
         }
 
         throw new IllegalStateException();
