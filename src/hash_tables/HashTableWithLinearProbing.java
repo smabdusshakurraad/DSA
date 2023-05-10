@@ -59,6 +59,11 @@ public class HashTableWithLinearProbing {
         return key % items.length;
     }
 
+    private int hash2(int key){
+         int prime = 3; // less than the length
+         return prime - (key % prime);
+    }
+
     public int size(){
         return count;
     }
