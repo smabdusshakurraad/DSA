@@ -145,4 +145,23 @@ public class Tree {
     private boolean isLeaf(){
         return root.leftChild == null && root.rightChild == null;
     }
+
+    public boolean equals(Tree other){
+        if(other == null)
+            return false;
+        return equals(this.root, other.root);
+    }
+
+    private boolean equals(Node first, Node second){
+        if(first == null && second == null){
+            return true;
+        }
+
+        if(first != null && second != null){
+            return first.value == second.value
+                    && equals(first.leftChild, second.leftChild)
+                    && equals(first.rightChild, second.rightChild);
+        }
+        return false;
+    }
 }

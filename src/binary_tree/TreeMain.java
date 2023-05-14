@@ -36,5 +36,21 @@ public class TreeMain {
 
         System.out.println("Min for Binary Tree");
         System.out.println(tree.minForBinaryTree());
+        System.out.println();
+
+        System.out.println("Equal tree");
+
+
+        Tree tree2 = new Tree();
+
+        tree2.insert(7);
+        tree2.insert(4);
+        tree2.insert(9);
+        tree2.insert(1);
+        tree2.insert(6);
+        tree2.insert(8);
+        tree2.insert(10);
+
+        System.out.println(tree.equals(tree2));
     }
 }
