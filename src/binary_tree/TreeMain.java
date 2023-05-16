@@ -1,5 +1,7 @@
 package binary_tree;
 
+import java.util.ArrayList;
+
 public class TreeMain {
     public static void main(String[] args) {
         Tree tree = new Tree();
@@ -52,5 +54,53 @@ public class TreeMain {
         tree2.insert(10);
 
         System.out.println(tree.equals(tree2));
+        System.out.println();
+
+        System.out.println("Validate BST");
+        System.out.println(tree.isBinarySearchTree());
+//        tree.swap();
+//        System.out.println(tree.isBinarySearchTree());
+//        System.out.println();
+
+        System.out.println("Node at K distance");
+        tree.printNodeAtDistance(2);
+        System.out.println();
+
+        System.out.println("Get nodes");
+        var list = tree2.getNodesAtDistance(1);
+        for(int item : list)
+            System.out.println(item);
+        System.out.println();
+
+
+        System.out.println("Level Order BFS traverse");
+        tree.traverseLevelOrder();
+        System.out.println();
+
+        System.out.println("Tree size");
+        System.out.println(tree.size());
+        System.out.println();
+
+        System.out.println("Count Leaves");
+        System.out.println(tree.countLeaves());
+        System.out.println();
+
+        System.out.println("Binary Search Tree Max value");
+        System.out.println(tree.binarySearchTreeMax());
+        System.out.println();
+
+
+        System.out.println("Contains");
+        System.out.println(tree.contains(9));
+        System.out.println(tree.contains(80));
+        System.out.println();
+
+
+        System.out.println("Are siblings");
+        System.out.println(tree.areSibling(1, 6));
+        System.out.println(tree.areSibling(1, 8));
+        System.out.println();
+
+
     }
 }
