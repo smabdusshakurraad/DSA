@@ -19,6 +19,7 @@ public class TreeMain {
 
         System.out.println("Pre Order");
         tree.treePreOrderTraverse();
+        System.out.println();
 
         System.out.println("In Order");
         tree.inOrderTraverse();
@@ -58,6 +59,7 @@ public class TreeMain {
 
         System.out.println("Validate BST");
         System.out.println(tree.isBinarySearchTree());
+        System.out.println();
 //        tree.swap();
 //        System.out.println(tree.isBinarySearchTree());
 //        System.out.println();
@@ -99,6 +101,14 @@ public class TreeMain {
         System.out.println("Are siblings");
         System.out.println(tree.areSibling(1, 6));
         System.out.println(tree.areSibling(1, 8));
+        System.out.println();
+
+
+        System.out.println("Get ancestors");
+        System.out.println(tree.getAncestors(1));
+        System.out.println(tree.getAncestors(10));
+        System.out.println(tree.getAncestors(7));
+        System.out.println(tree.getAncestors(9));
         System.out.println();
 
 
