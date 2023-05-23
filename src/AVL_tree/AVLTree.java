@@ -72,9 +72,9 @@ public class AVLTree {
         }
         // if right heavy
         if(isRightHeavy(node)){
-            // If right child balance factor is greater than 0 means it only have left sub tree
+            // If right child balance factor is greater than 0 means it only have left subtree
             if(balanceFactor(root.rightChild) > 0)
-                node.rightChild = rightRotate(node.rightChild); // right rotate right child
+                node.rightChild = rightRotate(node.rightChild); // right rotate child
 
             node = leftRotate(node); // left rotate node
         }
