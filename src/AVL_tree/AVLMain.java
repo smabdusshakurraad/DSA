@@ -8,5 +8,10 @@ public class AVLMain {
         avlTree.insert(30);
 
         System.out.println();
+
+        System.out.println("Tree is Balanced: " + avlTree.isBalance());;
+
+        System.out.println("Tree is perfect: " + avlTree.isPerfect());
+
     }
 }
