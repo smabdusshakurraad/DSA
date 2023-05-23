@@ -162,8 +162,12 @@ public class AVLTree {
      * @return {@link Boolean}
      */
     private boolean isBalance(AVLNode node){
-        return (Math.abs(balanceFactor(root)) <= 1) &&  (Math.abs(balanceFactor(root.leftChild)) <= 1)
-                && (Math.abs(balanceFactor(root.rightChild)) <= 1);
+        if(node == null)
+            return true;
+
+        int balanceFactor = balanceFactor(node);
+        return (Math.abs(balanceFactor) <= 1) &&  isBalance(node.leftChild)
+                && isBalance(node.rightChild);
     }
 
     /**
