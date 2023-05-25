@@ -13,6 +13,8 @@ public class HeapMain {
         heap.insert(1);
         heap.insert(24);
 
-        System.out.println(heap.toString());
+        heap.remove();
+
+        heap.print();
     }
 }
