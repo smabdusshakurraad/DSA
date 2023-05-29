@@ -44,5 +44,16 @@ public class HeapMain {
 
         items = new int[]{5, 3, 8, 4, 1, 2};
         System.out.println("Kth Largest Item: " + MaxHeap.kthLargestItem(items, 5));
+
+        items = new int[] {8, 4, 5, 3, 1, 2 };
+        System.out.println("Is a Max Heap: " + MaxHeap.isMaxHeap(items));
+
+        MinHeap minHeap = new MinHeap();
+        minHeap.insert(10, "RK");
+        minHeap.insert(5, "Raad");
+        minHeap.insert(20, "TT");
+
+        System.out.println();
+        System.out.println(minHeap.remove());
     }
 }

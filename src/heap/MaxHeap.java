@@ -54,4 +54,23 @@ public class MaxHeap {
 
         return kthItem;
     }
+
+    public static boolean isMaxHeap(int[] array){
+        for(int i = array.length / 2 -1; i > -1; i--){
+            if(!validMaxHeap(array, i))
+                return false;
+        }
+        return true;
+    }
+
+    private static boolean validMaxHeap(int[] array, int parentIndex) {
+        var leftChildIndex = 2 * parentIndex + 1;
+        var rightChildIndex = 2 * parentIndex + 2;
+        if(leftChildIndex < array.length &&
+                array[parentIndex] < array[leftChildIndex])
+            return false;
+
+        return rightChildIndex >= array.length ||
+                array[parentIndex] >= array[rightChildIndex];
+    }
 }
