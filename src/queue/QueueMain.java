@@ -91,6 +91,25 @@ public class QueueMain {
         stackUsingTwoQueues.push(30);
 
         System.out.println(stackUsingTwoQueues.pop());
+        System.out.println();
+
+        System.out.println("Priority queue using heap");
+        PriorityQueueWithHeap priorityQueueWithHeap = new PriorityQueueWithHeap();
+        priorityQueueWithHeap.enqueue(10);
+        priorityQueueWithHeap.enqueue(20);
+        priorityQueueWithHeap.enqueue(30);
+
+        System.out.println(priorityQueueWithHeap.dequeue());
+        System.out.println();
+
+
+        System.out.println("Min Priority queue using Min heap");
+        MinPriorityQueueWithHeap minPriorityQueueWithHeap = new MinPriorityQueueWithHeap();
+        minPriorityQueueWithHeap.add("Raad",10);
+        minPriorityQueueWithHeap.add("Rk",20);
+        minPriorityQueueWithHeap.add("Tareq", 30);
+
+        System.out.println(minPriorityQueueWithHeap.remove());
     }
 
     public static void reverse(Queue<Integer> queue){

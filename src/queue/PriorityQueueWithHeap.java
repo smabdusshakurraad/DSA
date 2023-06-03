@@ -8,8 +8,8 @@ public class PriorityQueueWithHeap {
         heap.insert(item);
     }
 
-    public void dequeue(){
-        heap.remove();
+    public int dequeue(){
+        return heap.remove();
     }
 
     public boolean isEmpty(){
@@ -17,6 +17,6 @@ public class PriorityQueueWithHeap {
     }
 
     public boolean isFull(){
-        return heap.isEmpty();
+        return heap.isFull();
     }
 }
