@@ -8,7 +8,12 @@ public class TrieMain {
 
         System.out.println("done");
 
+        System.out.println("Count: " + tries.countWords());
+
         System.out.println(tries.contains("ca"));
+        System.out.println(tries.contains("car"));
+        System.out.println(tries.containsRecursive("ca"));
+        System.out.println(tries.containsRecursive("car"));
 
         System.out.println("Pre Order Traversal");
         tries.preOrderTraversal();

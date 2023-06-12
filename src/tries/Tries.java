@@ -165,4 +165,35 @@ public class Tries {
         return current;
     }
 
+    public boolean containsRecursive(String word){
+        return containsRecursive(root, word, 0);
+    }
+
+    private boolean containsRecursive(TrieNode root, String word, int index) {
+        if(index == word.length())
+            return root.isEndOfWord;
+
+        TrieNode child = root.getChild(word.charAt(index));
+        if(child == null)
+            return false;
+
+        return containsRecursive(root.getChild(word.charAt(index)), word, index+1);
+
+    }
+
+    public int countWords(){
+        return countWords(root, 0);
+    }
+
+    private int countWords(TrieNode node, int count) {
+        if(node.isEndOfWord)
+            count++;
+
+        var childrens = node.getAllChildren();
+        for(var child : childrens)
+            count = countWords(child, count);
+
+        return count;
+    }
+
 }
