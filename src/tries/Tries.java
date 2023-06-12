@@ -20,7 +20,7 @@ public class Tries {
         }
 
         public void add(char ch){
-            childs.put(ch, new TrieNode(ch));
+            childs.putIfAbsent(ch, new TrieNode(ch));
         }
 
         public TrieNode getChild(char ch){
@@ -196,4 +196,31 @@ public class Tries {
         return count;
     }
 
+    public String longestPrefix(String[] words){
+        var current = buildTrie(words);
+        StringBuilder prefix = new StringBuilder();
+
+        while (current.getAllChildren().length == 1 && !current.isEndOfWord){
+            char ch = current.getAllChildren()[0].value;
+            prefix.append(ch);
+            current = current.getChild(ch);
+        }
+
+        return prefix.toString();
+    }
+    private TrieNode buildTrie(String[] words){
+        var root = new TrieNode(' ');
+
+        for (String word : words){
+            TrieNode current = root;
+            for(var ch : word.toCharArray()){
+                current.add(ch);
+                current = current.getChild(ch);
+            }
+
+            current.isEndOfWord = true;
+        }
+
+        return root;
+    }
 }

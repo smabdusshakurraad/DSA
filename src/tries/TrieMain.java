@@ -29,6 +29,16 @@ public class TrieMain {
 
         var words = tries.findWords("ca");
         System.out.println(words);
+
+
+        String[] strings = {"card", "care"};
+        String[] strings1 = {"car", "care"};
+        String[] strings2 = {"car", "dog"};
+        String[] strings3 = {"car"};
+        System.out.println("Longest prefix for {\"card\", \"care\"}: " + tries.longestPrefix(strings));
+        System.out.println("Longest prefix for {\"car\", \"care\"}: " + tries.longestPrefix(strings1));
+        System.out.println("Longest prefix for {\"car\", \"dog\"}: " + tries.longestPrefix(strings2));
+        System.out.println("Longest prefix for {\"car\"}: " + tries.longestPrefix(strings3));
     }
 
 }
