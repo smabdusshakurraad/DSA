@@ -27,5 +27,9 @@ public class GraphMain {
         System.out.println();
 
         graphTraverse.dfsIterative("A");
+        System.out.println();
+
+        System.out.println("BFS");
+        graphTraverse.bfsIterative("A");
     }
 }

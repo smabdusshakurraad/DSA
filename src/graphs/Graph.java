@@ -103,4 +103,27 @@ public class Graph {
 
         }
     }
+
+    public void bfsIterative(String label){
+        var root = nodes.get(label);
+        if(root == null)
+            return;
+
+        Set<Node> visited = new HashSet<>();
+
+        Queue<Node> queue = new ArrayDeque<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()){
+            var current = queue.remove();
+            System.out.println(current);
+            visited.add(current);
+
+            for(var neighbor : adjacencyList.get(current)){
+                if(!visited.contains(neighbor)){
+                    queue.add(neighbor);
+                }
+            }
+        }
+    }
 }
