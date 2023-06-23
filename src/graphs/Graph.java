@@ -1,9 +1,6 @@
 package graphs;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Graph {
     private class Node{
@@ -66,5 +63,22 @@ public class Graph {
             return;
 
         adjacencyList.get(fromNode).remove(toNode);
+    }
+
+    public void dfs(String label){
+        var root = nodes.get(label);
+        if(root == null)
+            return;
+
+        dfs(root, new HashSet<>());
+    }
+
+    private void dfs(Node root, Set<Node> visited) {
+        System.out.println(root);
+        visited.add(root);
+        for (var child : adjacencyList.get(root)){
+            if(!visited.contains(child))
+                dfs(child, visited);
+        }
     }
 }
