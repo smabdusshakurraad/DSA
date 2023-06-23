@@ -81,4 +81,26 @@ public class Graph {
                 dfs(child, visited);
         }
     }
+
+    public void dfsIterative(String label){
+        var root = nodes.get(label);
+        if(root == null)
+            return;
+
+        Stack<Node> callStack = new Stack<>();
+        Set<Node> visited = new HashSet<>();
+        callStack.add(root);
+
+        while (!callStack.isEmpty()){
+            var current = callStack.pop();
+            System.out.println(current);
+            visited.add(current);
+
+            for(var child : adjacencyList.get(current)){
+                if(!visited.contains(child))
+                    callStack.add(child);
+            }
+
+        }
+    }
 }

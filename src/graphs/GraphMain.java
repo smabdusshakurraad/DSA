@@ -24,6 +24,8 @@ public class GraphMain {
         graphTraverse.addEdge("D", "C");
 
         graphTraverse.dfs("A");
+        System.out.println();
 
+        graphTraverse.dfsIterative("A");
     }
 }
